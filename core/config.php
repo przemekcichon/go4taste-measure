@@ -66,10 +66,16 @@ function g4t_measure_consent_wait_for_update(): ?int {
     return G4T_MEASURE_CONSENT_WAIT_FOR_UPDATE >= 0 ? G4T_MEASURE_CONSENT_WAIT_FOR_UPDATE : null;
 }
 
+/**
+ * gtag('set', 'ads_data_redaction', ...), default true.
+ */
 function g4t_measure_ads_data_redaction(): bool {
     return g4t_measure_bool_constant( 'G4T_MEASURE_ADS_DATA_REDACTION', true );
 }
 
+/**
+ * gtag('set', 'url_passthrough', ...), default false.
+ */
 function g4t_measure_url_passthrough(): bool {
     return g4t_measure_bool_constant( 'G4T_MEASURE_URL_PASSTHROUGH', false );
 }
@@ -96,6 +102,9 @@ function g4t_measure_cookiebot_blocking_mode(): string {
     return 'manual';
 }
 
+/**
+ * Whether the Cookiebot script gets the async attribute, default true.
+ */
 function g4t_measure_cookiebot_async(): bool {
     return g4t_measure_bool_constant( 'G4T_MEASURE_COOKIEBOT_ASYNC', true );
 }
